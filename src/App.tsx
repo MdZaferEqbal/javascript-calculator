@@ -33,7 +33,7 @@ function App() {
     } else if (symbol === ".") {
       const lastNumber = expression.split(/[-+/*]/g).pop();
       if (!lastNumber) return;
-      
+
       if (lastNumber?.includes(".")) return;
       setExpression(expression + symbol);
     } else {
@@ -77,11 +77,10 @@ function App() {
   return (
     <>
       <div className="container">
-        <h1>JavaScript Calculator</h1>
+      <h1>JavaScript Calculator</h1>
         <div id="calculator">
           <div id="display" style={{textAlign: "right"}}>
             <div id="answer">{answer}</div>
-            <br/>
             <div id="expression">{expression}</div>
           </div>
           <button id='clear' className="light-gray" onClick={() => buttonPress("AC")}><b>AC</b></button>
